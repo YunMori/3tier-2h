@@ -3,11 +3,11 @@ const mysql = require("mysql");
 const OpenAI = require("openai");
 const cors = require("cors");
 
-const host = "데이터베이스 엔드포인트를 입력하세요";
-const user = "데이터베이스 사용자 ID를 입력하세요";
-const password = "데이터베이스 사용자 비밀번호를 입력하세요";
-const database = "데이터베이스 이름을 입력하세요";
-const openai_key = "Chatgpt API 키를 입력하세요";
+const host = "your db account";
+const user = "user name";
+const password = "db password";
+const database = "db name";
+const openai_key = "Chatgpt Api Key";
 
 const app = express();
 app.use(cors());
@@ -58,7 +58,7 @@ app.post("/notes", async (req, res) => {
         {
           role: "system",
           content:
-            "Your are expert in AWS, Tell me one AWS service names that I can learn additionally based on the data sent by the user.  in Korean",
+            " You are a Python expert from now on. Please comment on the details of the error in Korean",
         },
         // { role: "system", content: "Your are expert in AWS, Tell me one AWS service names that I can learn additionally based on the data sent by the user. as one sentence in Korean" },
         { role: "user", content: userMessage },

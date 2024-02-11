@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const server_url = "서버IP를 입력하세요";
+const server_url = "your server url";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -63,12 +63,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>학습 기록 애플리케이션</h1>
+      <h1>Code Errors Note</h1>
       <h3>오늘 학습한 내용을 기록해보세요.</h3>
       <textarea
         value={newNote}
         onChange={(e) => setNewNote(e.target.value)}
-        placeholder="무엇을 공부하셨나요?"
+        placeholder="오류의 내용을 알려주세요!"
       />
       <br />
       <button onClick={addNote}>학습 기록 추가</button>
